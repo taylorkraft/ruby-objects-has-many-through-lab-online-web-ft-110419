@@ -2,7 +2,7 @@ class Genre
   attr_accessor :name
 
   @@all = []
-  
+
   def initialize(name)
     self.name = name
   end
@@ -14,12 +14,12 @@ class Genre
   end
 
   def self.all
-    @@all 
+    @@all
   end
 
   def artists
     self.songs.collect do |artist|
-      artist.song 
+      artist.song
     end
   end
 end
