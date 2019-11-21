@@ -1,14 +1,14 @@
 class Doctor
-  attr_accessor :name 
+  attr_accessor :name
 
   @@all = []
-  
+
   def initialize(name)
     self.name = name
     @@all << self
   end
 
-  def appointments 
+  def appointments
     return Appointment.all.filter do |apt|
       apt.doctor == self
     end
@@ -16,8 +16,8 @@ class Doctor
 
   def new_appointment(date, patient)
     Appointment.new(date, patient, self)
-  end 
-    
+  end
+
 
 
 
