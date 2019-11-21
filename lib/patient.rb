@@ -22,7 +22,7 @@ class Patient
     end
   end
 
-  def doctor
+  def doctors
     self.appointments.collect do |apt|
       apt.doctor
     end
