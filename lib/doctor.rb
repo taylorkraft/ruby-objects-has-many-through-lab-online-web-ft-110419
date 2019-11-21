@@ -19,8 +19,8 @@ class Doctor
   end
 
   def patients
-    Appointment.all.collect do |apt|
-      apt.patient == self
+    self.appointments.collect do |apt|
+      apt.patient
     end
   end
 end
